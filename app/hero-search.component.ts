@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from '@rxjs/observable';
-import { Subject } from '@rxjs/subject';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 import { HeroSearchService } from './hero-search.service';
 import { Hero } from './hero';
@@ -19,7 +19,7 @@ export class HeroSearchComponent implements OnInit {
    private searchTerms = new Subject<string>();
 
    constructor(
-      private heroSearchService: heroSearchService,
+      private heroSearchService: HeroSearchService,
       private router: Router) {}
 
    search(term: string): void {
